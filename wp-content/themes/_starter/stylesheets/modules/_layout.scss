@@ -1,0 +1,17 @@
+// ------------------------------------------------------------
+// Layout
+// ------------------------------------------------------------
+
+@mixin container{
+  width: 91.9921875%;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1146px;
+  @include media($large-up){
+    width: 78.19444444444444%;
+  }
+}
+
+.container{
+  @include container();
+}

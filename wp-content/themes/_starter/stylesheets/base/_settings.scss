@@ -1,0 +1,94 @@
+// ------------------------------------------------------------
+// Settings
+// ------------------------------------------------------------
+
+// Vars
+// ------------------------------------------------------------
+
+// Colours
+$light: #ffffff;  // White
+$dark: #000000;   // Black
+$main: #00f;      // Blue
+$error: #f00;     // Red
+$border: #999;    // Grey
+
+$twitter: #55acee;   // Twitter
+$facebook: #3b5998;  // Facebook
+$instagram: #125688; // Instagram
+$linkedin: #007bb5;  // Linkedin
+$pinterest: #cb2027;  // Pinterest
+$googleplus: #dd4b39;  // Google+
+
+
+// Typography
+$base-font-size: 17px;
+$base-line-height: 1.5;
+$heading-line-height: 1.2;
+
+// Border
+$base-border: 1px solid $border;
+
+// Other Sizes
+$border-radius: 3px;
+$base-spacing: 10px;
+$small-spacing: $base-spacing / 2;
+
+// Animations
+$base-duration: 0.4s;
+$base-timing: ease;
+
+// Forms
+$form-box-shadow: inset 0 1px 3px rgba($dark, 0.06);
+$form-box-shadow-focus: $form-box-shadow, 0 0 5px adjust-color($main, $lightness: -5%, $alpha: -0.3);
+
+// Mixins
+// ------------------------------------------------------------
+@mixin fontFamily{
+  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+}
+
+@mixin font-size($size){
+  font-size: $size;
+  font-size: rem($size);
+}
+
+@mixin aspect-ratio($width, $height) {
+  position: relative;
+  &:before {
+    display: block;
+    content: "";
+    width: 100%;
+    padding-top: ($height / $width) * 100%;
+  }
+  > .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+}
+
+@mixin vertical-align{
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+@mixin cap-text{
+  text-transform: uppercase;
+  @include font-size(16px);
+  font-weight: 700;
+}
+
+@mixin list-style-none{
+  padding: 0;
+  margin: 0;
+  &:before{display: none;}
+}
+
+// Helper Classes
+// ------------------------------------------------------------
+.hidden, .screen-reader-text{display: none;}

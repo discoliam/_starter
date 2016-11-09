@@ -1,0 +1,50 @@
+// ------------------------------------------------------------
+// Lists
+// ------------------------------------------------------------
+
+ul, ol {
+  margin-left: 0;
+  padding-left: 0;
+
+  li{
+    margin-left: 20px;
+    padding-left: 26px;
+    position: relative;
+     &:before {
+      color: $main;
+      position: absolute;
+      top: 0;
+      left: 0;
+     }
+  }
+}
+
+// Coloured Lists
+ul li {
+  position: relative;
+  list-style: none;
+  &:before {
+    content: "\25CF";
+    display: inline-block;
+    font-size: 10px;
+    top: 6px;
+  }
+}
+
+ol {
+  counter-reset: item;
+  li{
+    display: block;
+    &:before {
+      content: counter(item) ". ";
+      counter-increment: item;
+      color: $main;
+    }
+  }
+}
+
+
+// Definition Lists
+dd{
+  margin-left: 0;
+}

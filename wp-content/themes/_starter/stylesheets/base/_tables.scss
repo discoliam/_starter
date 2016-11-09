@@ -1,0 +1,35 @@
+// ------------------------------------------------------------
+// Tables
+// ------------------------------------------------------------
+table {
+  border-collapse: collapse;
+  margin: 0 0 40px 0;
+  table-layout: fixed;
+  width: 100%;
+  border-top: $base-border;
+  border-left: $base-border;
+}
+
+th, td{
+  border-right: $base-border;
+  text-align: left;
+  padding: 5px 8px;
+}
+
+th {
+  font-weight: 700;
+}
+
+tr{
+  border-bottom: $base-border;
+}
+
+tr,
+td,
+th {
+  vertical-align: middle;
+}
+
+// tr:nth-child(even){
+//   background-color: $bg;
+// }
