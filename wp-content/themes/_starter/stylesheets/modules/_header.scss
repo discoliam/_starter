@@ -2,59 +2,52 @@
 // Header
 // ------------------------------------------------------------
 
-header.site-header{
-}
+header.site-header{}
 
-.site-title {
-}
+.site-title {}
 
 .main-navigation{
+  display: none;
+  @include media($medium-up){
+    display: block;
+  }
 }
 
 .menu-toggle {
   display: block;
-  @include size(22px 16px);
-  @include transform(rotate(0deg));
-  @include transition(.5s ease-in-out);
+  width: 22px;
+  height: 16px;
   position: absolute;
   top: 26px;
-  right: 15px; 
+  right: 0;
   cursor: pointer;
   z-index: 30;
-  span{
+  b{
     display: block;
     position: absolute;
-    @include size(100% 2px);
+    width: 100%;
+    height: 2px;
     background: $dark;
     opacity: 1;
     left: 0;
-    @include transform(rotate(0deg));
-    @include transition(.25s ease-in-out);
+    transform: rotate(0deg);
+    transition: all 0.25s ease-in-out;
     &:nth-child(1) {top: 0px;}
     &:nth-child(2), &:nth-child(3) {top: 7px;}
     &:nth-child(4) {top: 14px;}
-  }
-  &.open span{
-    &:nth-child(1),
-    &:nth-child(4) {
-      opacity: 0;
-    }
-    &:nth-child(2) {@include transform(rotate(45deg));}
-    &:nth-child(3) {@include transform(rotate(-45deg));}
   }
   @include media($medium-up){
     display: none;
   }
 }
 
-
-// Scrolled
-body.scrolled header.site-header{
-}
-
-
 // Open Menu
-body.menu-open{
+body.open{
+  .main-navigation {display: block;}
+  .menu-toggle b{
+    &:nth-child(1),
+    &:nth-child(4) {opacity: 0;}
+    &:nth-child(2) {transform: rotate(45deg);}
+    &:nth-child(3) {transform: rotate(-45deg);}
+  }
 }
-
-// Selected State

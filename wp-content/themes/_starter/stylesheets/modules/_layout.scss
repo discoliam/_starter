@@ -2,13 +2,20 @@
 // Layout
 // ------------------------------------------------------------
 
+// Re-useable container
 @mixin container{
   width: 95%;
   margin-left: auto;
   margin-right: auto;
-  max-width: 1400px;
+  max-width: $max-width;
+  position: relative;
 }
 
 .container{
+  @include container();
+}
+
+// Site Wrapper
+.site-content{
   @include container();
 }
