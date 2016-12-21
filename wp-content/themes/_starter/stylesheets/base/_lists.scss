@@ -2,13 +2,13 @@
 // Lists
 // ------------------------------------------------------------
 
+// Universal Rules
 ul, ol {
   margin-left: 0;
   padding-left: 0;
-
   li{
-    margin-left: 20px;
-    padding-left: 26px;
+    margin-left: 1.5em;
+    padding-left: 1.5em;
     position: relative;
      &:before {
       color: $main;
@@ -19,18 +19,18 @@ ul, ol {
   }
 }
 
-// Coloured Lists
+// Unordered List
 ul li {
-  position: relative;
   list-style: none;
   &:before {
     content: "\25CF";
     display: inline-block;
-    font-size: 10px;
+    @include font-size(10px);
     top: 6px;
   }
 }
 
+// Ordered List
 ol {
   counter-reset: item;
   li{
@@ -38,13 +38,21 @@ ol {
     &:before {
       content: counter(item) ". ";
       counter-increment: item;
-      color: $main;
     }
   }
 }
 
 
 // Definition Lists
-dd{
+dl{
   margin-left: 0;
+  padding-left: 0;
+  dt {
+    font-weight: 700;
+    margin: 0;
+  }
+
+  dd {
+    margin: 0 0 1.5em 0;
+  }
 }

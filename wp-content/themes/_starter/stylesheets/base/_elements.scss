@@ -1,9 +1,7 @@
 // ------------------------------------------------------------
 // Elements
 // ------------------------------------------------------------
-html {
-  box-sizing: border-box;
-}
+html {box-sizing: border-box;}
 
 *,
 *:before,
@@ -13,53 +11,15 @@ html {
 
 body {
   background: $light;
+  color: $dark;
 }
 
-a {
-  color: $main;
-  
-  &:visited, 
-  &:focus,
-  &:active {
-    color: $main;
-  }
-  
-  &:hover{color: $dark;}
-  
-  &:focus {outline: thin dotted;}
-  
-  &:hover,
-  &:active {
-    outline: none;
-  }
-}
-
-
-ul,
-ol {
-  margin: 0 0 1.5em 3em;
-}
-
-ul {
-  list-style: disc;
-}
-
-ol {
-  list-style: decimal;
-}
-
-li > ul,
-li > ol {
-  margin-bottom: 0;
-  margin-left: 1.5em;
-}
-
-dt {
-  font-weight: 600;
-}
-
-dd {
-  margin: 0 1.5em 1.5em;
+hr {
+  border-bottom: $base-border;
+  border-left: 0;
+  border-right: 0;
+  border-top: 0;
+  margin: 0 0 $base-spacing 0;
 }
 
 img {
@@ -69,8 +29,3 @@ img {
 }
 
 a img{outline: 0;}
-
-table {
-  margin: 0 0 1.5em;
-  width: 100%;
-}

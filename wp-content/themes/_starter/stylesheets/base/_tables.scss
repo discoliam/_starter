@@ -3,11 +3,12 @@
 // ------------------------------------------------------------
 table {
   border-collapse: collapse;
-  margin: 0 0 40px 0;
-  table-layout: fixed;
+  margin: 0 0 1.5em;
+  width: 100%;
   width: 100%;
   border-top: $base-border;
   border-left: $base-border;
+  table-layout: fixed;
 }
 
 th, td{
@@ -29,7 +30,3 @@ td,
 th {
   vertical-align: middle;
 }
-
-// tr:nth-child(even){
-//   background-color: $bg;
-// }

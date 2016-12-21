@@ -2,7 +2,7 @@
 // Froms
 // ------------------------------------------------------------
 
-form{
+form {
   @include clearfix();
 }
 
@@ -14,8 +14,8 @@ fieldset {
 }
 
 legend {
-  font-weight: 600;
-  margin-bottom: $small-spacing / 2;
+  font-weight: 700;
+  margin-bottom: $base-spacing;
   padding: 0;
 }
 
@@ -60,19 +60,12 @@ textarea {
 [type="checkbox"],
 [type="radio"] {
   display: inline;
-  margin-right: $small-spacing / 2;
+  margin-right: $base-spacing;
 }
 
 [type="file"] {
-  margin-bottom: $small-spacing;
+  margin-bottom: $base-spacing;
   width: 100%;
-}
-
-select {
-  background: $light;
-  width: 100%;
-  @include appearance(none);
-  border-radius: 0;
 }
 
 .required {

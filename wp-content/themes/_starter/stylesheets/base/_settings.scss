@@ -21,7 +21,7 @@ $googleplus: #dd4b39;  // Google+
 
 
 // Typography
-$base-font-size: 17px;
+$base-font-size: 16px;
 $base-line-height: 1.5;
 $heading-line-height: 1.2;
 
@@ -30,20 +30,44 @@ $base-border: 1px solid $border;
 
 // Other Sizes
 $border-radius: 3px;
-$base-spacing: 10px;
-$small-spacing: $base-spacing / 2;
+$base-spacing: 20px;
 
 // Animations
 $base-duration: 0.4s;
-$base-timing: ease;
+$base-timing: linear;
 
 // Forms
 $form-box-shadow: inset 0 1px 3px rgba($dark, 0.06);
 $form-box-shadow-focus: $form-box-shadow, 0 0 5px adjust-color($main, $lightness: -5%, $alpha: -0.3);
 
+// Grid Settings
+// ------------------------------------------------------------
+@import "neat-helpers";
+
+// Neat Overrides
+$grid-columns: 12;
+$gutter: golden-ratio(1em, 1);
+$max-width: 1400px;
+
+// Neat Breakpoints
+$medium-screen: 768px;
+$lt-medium-screen: 767px;
+$large-screen: 1024px;
+$lt-large-screen: 1023px;
+$extra-large-screen: 1200px;
+$lt-extra-large-screen: 1199px;
+
+$small-only: new-breakpoint(max-width $lt-medium-screen);
+$medium-up: new-breakpoint(min-width $medium-screen);
+$medium-to-large: new-breakpoint(max-width $lt-large-screen min-width $medium-screen);
+$large-down: new-breakpoint(max-width $lt-large-screen);
+$large-up: new-breakpoint(min-width $large-screen);
+$extra-large-up: new-breakpoint(min-width $extra-large-screen);
+$portrait: new-breakpoint(orientation portrait);
+
 // Mixins
 // ------------------------------------------------------------
-@mixin fontFamily{
+@mixin font-family{
   font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
 }
 

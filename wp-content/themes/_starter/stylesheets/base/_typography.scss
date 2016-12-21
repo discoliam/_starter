@@ -2,7 +2,7 @@
 // Tyography
 // ------------------------------------------------------------
 body {
-  color: $dark;
+  @include font-family();
   @include font-size($base-font-size);
   line-height: $base-line-height;
   @include font-feature-settings("liga");
@@ -10,42 +10,41 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   line-height: 1.0;
-  margin: 0 0 20px 0;
+  margin: 0 0 $base-spacing 0;
   font-weight: 700;
 }
 
-h1{@include font-size(30px);}
+h1{@include font-size(40px);}
 h2{@include font-size(30px);}
-h3{@include font-size(19px);}
-h4{@include font-size(30px);}
-h5{@include font-size(30px);}
-h6{@include font-size(30px);}
+h3{@include font-size(26px);}
+h4{@include font-size(24px);}
+h5{@include font-size(22px);}
+h6{@include font-size(22px);}
 
-p {margin: 0 0 20px 0;}
-
+p {margin: 0 0 $base-spacing 0;}
 
 a {
   color: $main;
   text-decoration: none;
-  @include transition(color $base-duration $base-timing, background-color $base-duration $base-timing);
-
-  &:active,
+  transition: color $base-duration $base-timing, background-color $base-duration $base-timing;
+  &:visited, 
   &:focus,
-  &:hover {
-    color: $dark;
+  &:active {
+    color: $main;
+  }
+  
+  &:hover{color: $dark;}
+  
+  &:focus, 
+  &:hover,
+  &:active {
+    outline: none;
   }
 }
 
-hr {
-  border-bottom: $base-border;
-  border-left: 0;
-  border-right: 0;
-  border-top: 0;
-  margin: $base-spacing 0;
-}
-
-
 blockquote{
   font-family: serif;
+  padding: $base-spacing;
+  margin: 0 0 $base-spacing 0;
   @include font-size(28px);
 }

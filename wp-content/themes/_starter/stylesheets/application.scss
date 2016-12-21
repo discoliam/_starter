@@ -5,14 +5,12 @@
 // Base
 @import "base/normalize";
 @import "base/settings";
-@import "base/grid-settings";
+@import "base/typography";
 @import "base/elements";
-@import "base/buttons";
 @import "base/forms";
 @import "base/lists";
 @import "base/tables";
-@import "base/typography";
-
+@import "base/buttons";
 
 // Modules
 @import "modules/**/*.scss";
