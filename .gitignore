@@ -12,6 +12,7 @@ Thumbs.db
 .cvs
 *.bak
 *.swp
+.htaccess
 
 # Wordpress Specific
 #===================================
