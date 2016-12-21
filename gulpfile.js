@@ -12,8 +12,8 @@ var plugins = require("gulp-load-plugins")({
 // File paths
 //==============================================================================
 var paths = {
-  svg   : 'wp-content/themes/starter/images/icons',
-  theme : 'wp-content/themes/starter/'
+  svg   : 'wp-content/themes/_starter/images/icons',
+  theme : 'wp-content/themes/_starter/'
 };
 
 //==============================================================================
