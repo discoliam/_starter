@@ -24,9 +24,14 @@ wp-content/advanced-cache.php
 wp-content/wp-cache-config.php
 wp-content/cache/*
 wp-content/cache/supercache/*
+wp-content/plugins/*
+wp-content/languages/*
 wp-content/themes/twentythirteen/
 wp-content/themes/twentyfourteen/
 wp-content/themes/twentyfifteen/
+wp-content/themes/twentysixteen/
+wp-content/themes/twentyseventeen/
+
 
 # WP Engine Specific
 #===================================
