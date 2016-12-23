@@ -1,31 +1,71 @@
 <?php 
   // @package _starter
+
   $instagramURL = get_field('options_instagram_url', 'option');
   $twitterURL = get_field('options_twitter_url', 'option');
   $facebookURL = get_field('options_facebook_url', 'option');
+
+  $email = get_field('options_email_address', 'option');
+
+  $address1 = get_field('options_address_line_one', 'option');
+  $address2 = get_field('options_address_line_two', 'option');
+  $address3 = get_field('options_address_line_three', 'option');
+  $address4 = get_field('options_address_line_four', 'option');
+  $addressPostCode = get_field('options_address_postcode', 'option');
+
 ?>
 
 </div><!-- #content -->
 
 <footer class="site-footer" role="contentinfo">
+  
   <div class="container">
-    <p class="contact">
-      <a href="mailto:email@email.com" class="email">email@email.com</a>
+   
+    <div class="contact">
+      <?php if($email) {echo '<p><a href="mailto:'.$email.'" class="email">'.$email.'</a></p>';} ?>
+
+      <?php
+        if( have_rows('options_telephone', 'option') ):
+          while ( have_rows('options_telephone', 'option') ) : the_row();
+            echo '<p class="tel">'.get_sub_field("heading").'<br />'.get_sub_field("number").'</p>';
+          endwhile;
+        endif;
+      ?>
+
+      <?php if($address1 || $address2 || $address3 || $address4 || $addressPostCode) : ?>
+        <p class="address">
+          <?php 
+            if($address1) {echo $address1 . "<br />";}
+            if($address2) {echo $address2 . "<br />";}
+            if($address3) {echo $address3 . "<br />";}
+            if($address4) {echo $address4 . "<br />";}
+            if($addressPostCode) {echo '<a href="https://www.google.co.uk/maps/place/'.urlencode($addressPostCode).'">'.$addressPostCode.'</a>';}
+          ?>
+        </p>
+      <?php endif; ?>
+
+
+    </div>
+
+    <?php if($instagramURL || $twitterURL || $facebookURL) : ?>
+    <div class="social">
       <?php
         if($instagramURL) {
-          echo '<a href="' . $instagramURL . '" class="social instagram" title="Instagram"><i class="fa fa-instagram"></i></a>';
+          echo '<a href="' . $instagramURL . '" class="social instagram" title="Instagram"><i class="fa fa-instagram"></i> Instagram</a>';
         }
         if($twitterURL) {
-          echo '<a href="' . $twitterURL . '" class=" twitter" title="Twitter"><i class="fa fa-twitter"></i></a>';
+          echo '<a href="' . $twitterURL . '" class=" twitter" title="Twitter"><i class="fa fa-twitter"></i> Twitter</a>';
         }
         if($facebookURL) {
-          echo '<a href="' . $facebookURL . '" class="social facebook" title="Facebook"><i class="fa fa-facebook"></i></a>';
+          echo '<a href="' . $facebookURL . '" class="social facebook" title="Facebook"><i class="fa fa-facebook"></i> Facebook</a>';
         }
       ?>
-    </p>
+    </div>
+    <?php endif; ?>
+
 
     <p class="info">
-      <span class="copy">Copyright &copy; <?php bloginfo( 'name' ); ?> <?php echo date("Y"); ?></span>
+      <span class="copy">&copy; <?php bloginfo( 'name' ); ?> <?php echo date("Y"); ?></span>
     </p>
 
   </div>
