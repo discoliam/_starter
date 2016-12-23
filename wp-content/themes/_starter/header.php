@@ -67,7 +67,7 @@
   		  ?>
   		</nav>
 
-  		<span id="#menu-toggle" class="menu-toggle" aria-controls="primary-menu">
+  		<span id="menu-toggle" class="menu-toggle" aria-controls="primary-menu">
   			<b></b>
   			<b></b>
   			<b></b>
