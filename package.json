@@ -6,6 +6,7 @@
     "url": "git://github.com/discoliam/starter.git"
   },
   "description": "A starter theme for wordpress, using underscores and gulp",
+  "license": "SimPL-2.0",
   "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.1",
