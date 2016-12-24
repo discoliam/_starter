@@ -12,9 +12,9 @@ header.site-header{
 
 .main-navigation{
   display: none;
-  @include media($medium-up){
-    display: block;
-  }
+  // @include media($medium-up){
+  //   display: block;
+  // }
 }
 
 .menu-toggle {
@@ -40,9 +40,9 @@ header.site-header{
     &:nth-child(2), &:nth-child(3) {top: 7px;}
     &:nth-child(4) {top: 14px;}
   }
-  @include media($medium-up){
-    display: none;
-  }
+  // @include media($medium-up){
+  //   display: none;
+  // }
 }
 
 // Open Menu

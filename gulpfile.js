@@ -36,9 +36,7 @@ gulp.task('styles', function() {
     // Compile SCSS
     .pipe(plugins.sass({
         outputStyle : 'expanded',
-        sourceComments : 'none',
-        includePaths: require('node-bourbon').includePaths,
-        includePaths: require('node-neat').includePaths
+        sourceComments : 'none'
     }))
 
     .on("error", plugins.notify.onError(function (error) {
@@ -49,7 +47,8 @@ gulp.task('styles', function() {
     .pipe(plugins.autoprefixer('last 5 version'))
 
     // Min File
-    .pipe(plugins.minifyCss())
+    // .pipe(plugins.minifyCss())
+    .pipe(plugins.cleanCss())
 
     // Sourcemaps
     .pipe(plugins.sourcemaps.write('/', {

@@ -5,7 +5,6 @@ body {
   @include font-family();
   @include font-size($base-font-size);
   line-height: $base-line-height;
-  @include font-feature-settings("liga");
 }
 
 h1, h2, h3, h4, h5, h6 {
