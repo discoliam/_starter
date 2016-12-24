@@ -93,13 +93,6 @@ gulp.task('scripts', function() {
   .pipe(gulp.dest(paths.theme))
 });
 
-// Images
-gulp.task('images', function() {
-  return gulp.src(paths.theme + 'images/**/*')
-  .pipe(plugins.cache(plugins.imagemin({ optimizationLevel: 7, progressive: true, interlaced: true })))
-  .pipe(gulp.dest('images'))
-});
-
 // Basic configuration example
 config = {
     mode: {
