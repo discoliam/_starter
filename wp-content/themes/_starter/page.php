@@ -11,5 +11,9 @@
 	<?php endwhile; // End of the loop.?>
 </main>
 
+<aside id="secondary-content" class="site-secondary" role="complementary">
+  <h2>Secondary Content</h2>
+</aside>
+
 <?php
 get_footer();

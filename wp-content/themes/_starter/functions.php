@@ -39,8 +39,8 @@ add_action( 'after_setup_theme', '_starter_setup' );
 
 // CSS and Javascript
 function _starter_theme() {
-	wp_enqueue_style( 'starter-style', get_template_directory_uri() . '/application.css' );
-	wp_enqueue_script( 'starter-application', get_template_directory_uri() . '/application.min.js', array(), '20130115', true );
+	wp_enqueue_style( '_starter-style', get_template_directory_uri() . '/application.css' );
+	wp_enqueue_script( '_starter-application', get_template_directory_uri() . '/application.min.js', array(), '20130115', true );
 }
 
 function my_jquery_enqueue() {
@@ -51,6 +51,12 @@ function my_jquery_enqueue() {
 
 if (!is_admin()) add_action("wp_enqueue_scripts", "my_jquery_enqueue", 11);
 add_action( 'wp_enqueue_scripts', '_starter_theme' );
+
+
+function _starter_favicon_url() {
+  $faviconURL = get_stylesheet_directory_uri() . "/images/favicons";
+  return $faviconURL;
+}
 
 // Custom Post Types
 require get_template_directory() . '/inc/custom-post-types.php';

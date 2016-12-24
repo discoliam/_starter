@@ -27,12 +27,6 @@ a {
   color: $main;
   text-decoration: none;
   transition: color $base-duration $base-timing, background-color $base-duration $base-timing;
-  &:visited, 
-  &:focus,
-  &:active {
-    color: $main;
-  }
-  
   &:hover{color: $dark;}
   
   &:focus, 

@@ -9,13 +9,20 @@
   margin-right: auto;
   max-width: $max-width;
   position: relative;
-}
-
-.container{
-  @include container();
+  @include clearfix();
 }
 
 // Site Wrapper
-.site-content{
+.site-content, .container{
   @include container();
+}
+
+
+// 2 Column Layout
+#main-content{
+
+}
+
+#secondary-content{
+
 }

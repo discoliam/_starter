@@ -2,7 +2,11 @@
 // Header
 // ------------------------------------------------------------
 
-header.site-header{}
+header.site-header{
+  .container{
+    border-bottom: $base-border;
+  }
+}
 
 .site-title {}
 

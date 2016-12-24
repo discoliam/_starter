@@ -3,5 +3,7 @@
 // ------------------------------------------------------------
 
 footer.site-footer{
-
+  .container{
+    border-top: $base-border;
+  }
 }
