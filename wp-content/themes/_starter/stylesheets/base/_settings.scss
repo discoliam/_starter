@@ -36,34 +36,29 @@ $base-spacing: 20px;
 $base-duration: 0.4s;
 $base-timing: linear;
 
-// Forms
-$form-box-shadow: inset 0 1px 3px rgba($dark, 0.06);
-$form-box-shadow-focus: $form-box-shadow, 0 0 5px adjust-color($main, $lightness: -5%, $alpha: -0.3);
+// Layout
+$max-width: 1400px;
+
+// Media Query Settings
+// ------------------------------------------------------------
+$mq-responsive: true;
+$mq-breakpoints: (
+  small:  320px,
+  medium: 768px,
+  large:  1024px,
+  extra-lare:  1200px,
+);
+
+@import '../../../../node_modules/sass-mq/mq';
 
 // Grid Settings
 // ------------------------------------------------------------
-// @import "neat-helpers";
 
-// Neat Overrides
-$grid-columns: 12;
-$gutter: golden-ratio(1em, 1);
-$max-width: 1400px;
-
-// Neat Breakpoints
-$medium-screen: 768px;
-$lt-medium-screen: 767px;
-$large-screen: 1024px;
-$lt-large-screen: 1023px;
-$extra-large-screen: 1200px;
-$lt-extra-large-screen: 1199px;
-
-$small-only: new-breakpoint(max-width $lt-medium-screen);
-$medium-up: new-breakpoint(min-width $medium-screen);
-$medium-to-large: new-breakpoint(max-width $lt-large-screen min-width $medium-screen);
-$large-down: new-breakpoint(max-width $lt-large-screen);
-$large-up: new-breakpoint(min-width $large-screen);
-$extra-large-up: new-breakpoint(min-width $extra-large-screen);
-$portrait: new-breakpoint(orientation portrait);
+// $susy-columns: 12;
+// $susy-gutter-width: 15px;
+$susy: (
+  columns: 12
+);
 
 // Mixins
 // ------------------------------------------------------------

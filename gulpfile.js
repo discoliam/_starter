@@ -36,7 +36,8 @@ gulp.task('styles', function() {
     // Compile SCSS
     .pipe(plugins.sass({
         outputStyle : 'expanded',
-        sourceComments : 'none'
+        sourceComments : 'none',
+        includePaths: ['node_modules/susy/sass']
     }))
 
     .on("error", plugins.notify.onError(function (error) {

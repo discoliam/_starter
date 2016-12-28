@@ -3,26 +3,31 @@
 // ------------------------------------------------------------
 
 // Re-useable container
-@mixin container{
+@mixin wrapper{
   width: 95%;
   margin-left: auto;
   margin-right: auto;
   max-width: $max-width;
   position: relative;
-  // @include clearfix();
+  @include clearfix();
 }
 
+// 
 // Site Wrapper
 .site-content, .container{
-  @include container();
+  @include wrapper();
 }
 
-
 // 2 Column Layout
+// ------------------------------------------------------------
 #main-content{
-
+  @include mq($from: large) {
+    @include span(8 of 12);
+  }
 }
 
 #secondary-content{
-
+  @include mq($from: large) {
+    @include span(4 of 12 last);
+  }
 }

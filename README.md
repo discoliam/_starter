@@ -8,9 +8,7 @@ This theme uses several different Open Source tools, plugins and libraries to ai
 * [SASS](http://sass-lang.com/)
 * [Node-sass](https://github.com/sass/node-sass)
 * [Gulp](http://gulpjs.com/)
-* [Bourbon](http://bourbon.io/)
-* [Neat](http://neat.bourbon.io/)
-* [Bitters](http://bitters.bourbon.io/)
+* [SASS-MQ](https://github.com/sass-mq/sass-mq)
 * [Autoprefixer](https://github.com/postcss/autoprefixer)
 
 ## Front End Development
