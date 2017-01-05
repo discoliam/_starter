@@ -2,10 +2,6 @@
 // Froms
 // ------------------------------------------------------------
 
-form {
-  
-}
-
 fieldset {
   background-color: transparent;
   border: 0;
@@ -20,7 +16,8 @@ legend {
 }
 
 label {
-  color: $dark; 
+  color: $dark;
+  font-weight: 700;
 }
 
 input,
@@ -46,7 +43,7 @@ input[type="week"],
 input:not([type]),
 textarea,
 select {
-  border: solid 2px $border;
+  border: $base-border;
   border-radius: $border-radius;
   box-sizing: border-box;
   padding: 6px 10px;
@@ -62,15 +59,12 @@ select {
     opacity: 0.5;
     cursor: not-allowed;
   }
+
 }
 
-textarea {
-  resize: vertical;
-}
+textarea {resize: vertical;}
 
-[type="search"] {
-  appearance: none;
-}
+[type="search"] {appearance: none;}
 
 [type="checkbox"],
 [type="radio"] {
@@ -83,6 +77,4 @@ textarea {
   width: 100%;
 }
 
-.required {
-  color: $main;
-}
+.required {color: $main;}
