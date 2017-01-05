@@ -4,6 +4,8 @@
   $instagramURL = get_field('options_instagram_url', 'option');
   $twitterURL = get_field('options_twitter_url', 'option');
   $facebookURL = get_field('options_facebook_url', 'option');
+  $googleplusURL = get_field('options_googleplus_url', 'option');
+  $pinterestURL = get_field('options_pinterest_url', 'option');
 
   $email = get_field('options_email_address', 'option');
 
@@ -58,6 +60,12 @@
         }
         if($facebookURL) {
           echo '<a href="' . $facebookURL . '" class="facebook" title="Facebook"><i class="fa fa-facebook"></i></a>';
+        }
+        if($googleplusURL) {
+          echo '<a href="' . $googleplusURL . '" class="googleplus" title="Google Plus"><i class="fa fa-google-plus"></i></a>';
+        }
+        if($pinterestURL) {
+          echo '<a href="' . $pinterestURL . '" class="pinterest" title="Pinterest"><i class="fa fa-pinterest"></i></a>';
         }
       ?>
     </div>
