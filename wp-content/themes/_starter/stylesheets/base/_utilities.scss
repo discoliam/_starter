@@ -1,10 +1,17 @@
 // ------------------------------------------------------------
 // Utilities
 // ------------------------------------------------------------
+
 @mixin clearfix {
   &::after {
     clear: both;
     content: "";
     display: table;
   }
+}
+
+@mixin hide-text {
+  overflow: hidden;
+  text-indent: 101%;
+  white-space: nowrap;
 }

@@ -39,6 +39,7 @@ add_action( 'after_setup_theme', '_starter_setup' );
 
 // CSS and Javascript
 function _starter_theme() {
+  wp_enqueue_style( '_starter-fontawesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css' );
 	wp_enqueue_style( '_starter-style', get_template_directory_uri() . '/application.css' );
 	wp_enqueue_script( '_starter-application', get_template_directory_uri() . '/application.min.js', array(), '20130115', true );
 }

@@ -9,18 +9,18 @@
   cursor: pointer;
   display: block;
   -webkit-font-smoothing: antialiased;
-  line-height: 1;
-  padding: 13px 23px;
+  line-height: 50px;
+  height: 50px;
+  padding: 0 20px;
   text-decoration: none;
   user-select: none;
   vertical-align: middle;
   white-space: nowrap;
   transition: background-color $base-duration $base-timing, color $base-duration $base-timing, border $base-duration $base-timing;
   text-align: center;
-  text-transform: uppercase;
   display: inline-block;
   border-radius: $border-radius;
-  @include font-size(12px);
+  @include cap-text();
 
   &:hover {
     background-color: $dark;
@@ -30,6 +30,7 @@
 
   @if $type == outline {
     background-color: transparent;
+    color: $main;
     &:hover{
       background-color: $dark;
       border-color: $dark;

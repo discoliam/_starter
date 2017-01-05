@@ -20,14 +20,9 @@
 
 // 2 Column Layout
 // ------------------------------------------------------------
-#main-content{
+body.page-template-default {
   @include mq($from: large) {
-    @include span(8 of 12);
-  }
-}
-
-#secondary-content{
-  @include mq($from: large) {
-    @include span(4 of 12 last);
+    #main-content{@include span(8 of 12);}
+    #secondary-content{@include push(1);@include span(3 of 12 last);}
   }
 }

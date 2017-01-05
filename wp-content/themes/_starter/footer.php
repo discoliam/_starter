@@ -51,13 +51,13 @@
     <div class="social">
       <?php
         if($instagramURL) {
-          echo '<a href="' . $instagramURL . '" class="social instagram" title="Instagram"><i class="fa fa-instagram"></i> Instagram</a>';
+          echo '<a href="' . $instagramURL . '" class="instagram" title="Instagram"><i class="fa fa-instagram"></i></a>';
         }
         if($twitterURL) {
-          echo '<a href="' . $twitterURL . '" class=" twitter" title="Twitter"><i class="fa fa-twitter"></i> Twitter</a>';
+          echo '<a href="' . $twitterURL . '" class=" twitter" title="Twitter"><i class="fa fa-twitter"></i></a>';
         }
         if($facebookURL) {
-          echo '<a href="' . $facebookURL . '" class="social facebook" title="Facebook"><i class="fa fa-facebook"></i> Facebook</a>';
+          echo '<a href="' . $facebookURL . '" class="facebook" title="Facebook"><i class="fa fa-facebook"></i></a>';
         }
       ?>
     </div>
@@ -65,7 +65,7 @@
 
 
     <p class="info">
-      <span class="copy">&copy; <?php bloginfo( 'name' ); ?> <?php echo date("Y"); ?></span>
+      <span class="copy">&copy; <?php echo date("Y"); ?> <?php bloginfo( 'name' ); ?></span>
     </p>
 
   </div>

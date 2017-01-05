@@ -3,7 +3,34 @@
 // ------------------------------------------------------------
 
 footer.site-footer{
+  @include font-size(12px);
+  text-align: center;
+
   .container{
     border-top: $base-border;
+    padding-top: $base-spacing;
+    @include clearfix();
+  }
+
+  .contact p{
+    margin-bottom: 5px;
+  }
+
+  .social a{
+    margin: 0 5px 5px 5px;
+  }
+
+  p.info{clear: both;}
+
+
+  @include mq($from: medium) {
+    .contact{
+      @include span(6 of 12);
+      text-align: left; 
+    }
+    .social{
+      @include span(6 of 12 last);
+      text-align: right;
+    }
   }
 }

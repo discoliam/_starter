@@ -4,7 +4,8 @@
 ?>
 
 <main id="main-content" class="site-main" role="main">
-	<h1 class="page-title"><?php the_title(); ?></h1>
+	
+  <h1 class="page-title">Blog</h1>
 
 	<?php
 		if ( have_posts() ) {
