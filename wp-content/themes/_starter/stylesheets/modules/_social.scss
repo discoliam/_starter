@@ -1,0 +1,27 @@
+// ------------------------------------------------------------
+// Social
+// ------------------------------------------------------------
+
+.social{
+  a{
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    border-radius: 999em;
+    text-align: center;
+    background-color: $main;
+    color: $light;
+    @include font-size(30px);
+    &.facebook{background-color: $facebook;}
+    &.twitter{background-color: $twitter;}
+    &.instagram{background-color: $instagram;}
+    &.linkedin{background-color: $linkedin;}
+    &.pinterest{background-color: $pinterest;}
+    &.googleplus{background-color: $googleplus;}
+
+    &:hover{
+      background-color: $dark !important;
+    }
+  }
+}

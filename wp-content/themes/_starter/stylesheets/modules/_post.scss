@@ -1,0 +1,13 @@
+// ------------------------------------------------------------
+// Post
+// ------------------------------------------------------------
+
+article.post{
+  margin-bottom: $base-spacing;
+  padding-bottom: $base-spacing;
+  border-bottom: $base-border;
+  &:last-of-type {
+    border-bottom: 0;
+    padding: 0
+  }
+}
