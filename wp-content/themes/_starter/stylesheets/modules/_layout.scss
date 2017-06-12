@@ -12,7 +12,7 @@
   @include clearfix();
 }
 
-// 
+
 // Site Wrapper
 .site-content, .container{
   @include wrapper();
@@ -20,9 +20,9 @@
 
 // 2 Column Layout
 // ------------------------------------------------------------
-body.page-template-default {
-  @include mq($from: large) {
-    #main-content{@include span(8 of 12);}
-    #secondary-content{@include push(1);@include span(3 of 12 last);}
-  }
-}
+// body.page-template-default {
+//   @include mq($from: large) {
+//     #main-content{@include span(8 of 12);}
+//     #secondary-content{@include push(1);@include span(3 of 12 last);}
+//   }
+// }

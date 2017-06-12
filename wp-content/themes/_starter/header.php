@@ -49,7 +49,9 @@
   			}
   		?>
 
-  		<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
+  		<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" title="<?php bloginfo( 'name' ); ?>">
+        <img src="/wp-content/themes/_starter/images/logo.svg" alt="<?php bloginfo( 'name' ); ?> logo" />  
+      </a>
 
   		<?php
   			if ( is_front_page() && is_home() ) {
@@ -71,6 +73,8 @@
   				echo strip_tags(wp_nav_menu( $menuParameters ), '<a>' );
   		  ?>
   		</nav>
+
+      <?php get_search_form(); ?>
 
   		<span id="menu-toggle" class="menu-toggle" aria-controls="primary-menu">
   			<b></b>

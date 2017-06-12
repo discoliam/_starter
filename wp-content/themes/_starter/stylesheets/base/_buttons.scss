@@ -9,9 +9,9 @@
   cursor: pointer;
   display: block;
   -webkit-font-smoothing: antialiased;
-  line-height: 50px;
+  line-height: 46px;
   height: 50px;
-  padding: 0 20px;
+  padding: 0 40px;
   text-decoration: none;
   user-select: none;
   vertical-align: middle;
@@ -19,8 +19,9 @@
   transition: background-color $base-duration $base-timing, color $base-duration $base-timing, border $base-duration $base-timing;
   text-align: center;
   display: inline-block;
-  border-radius: $border-radius;
-  @include cap-text();
+  border-radius: 999em;
+  @include font-medium();
+  @include font-size(14px);
 
   &:hover {
     background-color: $dark;

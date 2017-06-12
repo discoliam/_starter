@@ -4,6 +4,28 @@
 
 body.blog,
 body.single-post {
+  
+  #main-content{
+    width: 100%;
+    @include clearfix();
+    @include mq($from: medium){
+      .post{
+        @include span(4 of 12);
+        &:nth-child(3n+3){@include last();}
+        &:nth-child(3n+4){clear: left;}
+
+      }
+    }
+
+  }
+
+  #supporting-content{
+    display: block;
+    clear: both;
+  }
+
+
+
 
 }
 

@@ -5,31 +5,47 @@
 footer.site-footer{
   @include font-size(12px);
   text-align: center;
+  border-top: $base-border;
+  padding-top: $base-spacing;
 
-  .container{
-    border-top: $base-border;
-    padding-top: $base-spacing;
-    @include clearfix();
+  .footer-navigation{
+    margin-bottom: $base-spacing;
+    a{
+      display: block;
+      @include font-size(14px);
+      @include font-bold();
+    }
   }
 
   .contact p{
-    margin-bottom: 5px;
+    margin-bottom: $base-spacing;
+  }
+
+  .address {
+    margin-bottom: $base-spacing;
   }
 
   .social a{
     margin: 0 5px 5px 5px;
   }
 
-  p.info{clear: both;}
-
-
   @include mq($from: medium) {
+
+    text-align: left;
+
+    .footer-navigation{
+      width: span(6 of 12);
+      a{display: inline-block;margin-right: 40px;}
+    }
+
     .contact{
       @include span(6 of 12);
-      text-align: left; 
     }
     .social{
-      @include span(6 of 12 last);
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: span(6 of 12);
       text-align: right;
     }
   }

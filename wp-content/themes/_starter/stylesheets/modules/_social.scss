@@ -5,14 +5,14 @@
 .social{
   a{
     display: inline-block;
-    width: 60px;
-    height: 60px;
-    line-height: 60px;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
     border-radius: 999em;
     text-align: center;
     background-color: $main;
     color: $light;
-    @include font-size(30px);
+    @include font-size(15px);
     &.facebook{background-color: $facebook;}
     &.twitter{background-color: $twitter;}
     &.instagram{background-color: $instagram;}

@@ -4,14 +4,16 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+  <?php if ( has_post_thumbnail() ) : ?>
+    <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" class="featured-image"><?php the_post_thumbnail(); ?></a>
+  <?php endif; ?>
+	<h2><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h2>
 	<div class="post-meta">
-		<p>Categories: <?php the_category( ', ' ); ?></p>
-    <p> <?php the_tags( 'Tags: ', ', ', '' ); ?></p>
-	  <p class="posted-on">
-	    <time>Posted on <?php the_date('jS F Y'); ?></time> by <span><?php the_author(); ?></span>
-	  </p>
-	</div>
-	<?php the_excerpt(); ?>
-	<a href="<?php the_permalink(); ?>" class="btn">Read More</a>
+    <p>
+      <span class="author"><?php the_author(); ?> &bull;</span>
+      <time>Posted on <?php the_date('d.m.y'); ?></time> &bull;
+      <?php the_category( ', ' ); ?>
+    </p>
+  </div>
+	<a href="<?php the_permalink(); ?>" class="btn" title="<?php the_title(); ?>">Read More</a>
 </article>

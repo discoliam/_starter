@@ -1,20 +1,16 @@
 <?php 
   // @package _starter
-
   $instagramURL = get_field('options_instagram_url', 'option');
   $twitterURL = get_field('options_twitter_url', 'option');
   $facebookURL = get_field('options_facebook_url', 'option');
   $googleplusURL = get_field('options_googleplus_url', 'option');
   $pinterestURL = get_field('options_pinterest_url', 'option');
-
   $email = get_field('options_email_address', 'option');
-
   $address1 = get_field('options_address_line_one', 'option');
   $address2 = get_field('options_address_line_two', 'option');
   $address3 = get_field('options_address_line_three', 'option');
   $address4 = get_field('options_address_line_four', 'option');
   $addressPostCode = get_field('options_address_postcode', 'option');
-
 ?>
 
 </div><!-- #content -->
@@ -22,6 +18,24 @@
 <footer class="site-footer" role="contentinfo">
   
   <div class="container">
+
+    <nav id="footer-navigation" class="footer-navigation" role="navigation">
+      <?php
+        $menuParameters = array(
+          'theme_location' => 'footer-menu',
+          'container'       => false,
+          'echo'            => false,
+          'items_wrap'      => '%3$s',
+          'depth'           => 0,
+        );
+        echo strip_tags(wp_nav_menu( $menuParameters ), '<a>' );
+      ?>
+    </nav>
+
+    <p class="info">
+      <span class="copy">&copy; <?php echo date("Y"); ?> <?php bloginfo( 'name' ); ?></span>
+    </p>
+
    
     <div class="contact">
       <?php if($email) {echo '<p><a href="mailto:'.$email.'" class="email">'.$email.'</a></p>';} ?>
@@ -70,11 +84,6 @@
       ?>
     </div>
     <?php endif; ?>
-
-
-    <p class="info">
-      <span class="copy">&copy; <?php echo date("Y"); ?> <?php bloginfo( 'name' ); ?></span>
-    </p>
 
   </div>
 

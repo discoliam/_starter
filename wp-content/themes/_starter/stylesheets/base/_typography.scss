@@ -1,6 +1,9 @@
 // ------------------------------------------------------------
 // Tyography
 // ------------------------------------------------------------
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,400i,500,700');
+
 body {
   @include font-family();
   @include font-size($base-font-size);
@@ -10,15 +13,15 @@ body {
 h1, h2, h3, h4, h5, h6 {
   line-height: 1.0;
   margin: 0 0 $base-spacing 0;
-  font-weight: 700;
+  font-weight: 500;
 }
 
-h1{@include font-size(40px);}
-h2{@include font-size(30px);}
-h3{@include font-size(26px);}
-h4{@include font-size(24px);}
-h5{@include font-size(22px);}
-h6{@include font-size(22px);}
+h1{@include font-size(36px);}
+h2{@include font-size(24px);}
+h3{@include font-size(21px);}
+h4{@include font-size(18px); text-transform: uppercase;}
+h5{@include font-size(18px); text-transform: uppercase;}
+h6{@include font-size(18px); text-transform: uppercase;}
 
 p {margin: 0 0 $base-spacing 0;}
 

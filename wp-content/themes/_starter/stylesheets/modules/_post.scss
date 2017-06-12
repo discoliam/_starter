@@ -4,10 +4,16 @@
 
 article.post{
   margin-bottom: $base-spacing;
-  padding-bottom: $base-spacing;
-  border-bottom: $base-border;
-  &:last-of-type {
-    border-bottom: 0;
-    padding: 0
+  .featured-image{
+    display: block;
+    margin-bottom: $base-spacing;
   }
+  h2{
+    @include font-size(21px);
+    @include font-medium();
+  }
+  .post-meta{
+    @include font-size(12px);
+  }
+
 }
