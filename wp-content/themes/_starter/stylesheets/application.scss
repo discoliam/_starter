@@ -2,7 +2,6 @@
 @import "susy";
 @import "base/utilities";
 
-
 // Base
 @import "base/normalize";
 @import "base/settings";
@@ -15,6 +14,9 @@
 
 // Modules
 @import "modules/**/*.scss";
+
+// Components
+@import "components/**/*.scss";
 
 // Templates
 @import "templates/**/*.scss";

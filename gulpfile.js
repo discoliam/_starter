@@ -66,6 +66,7 @@ gulp.task('styles', function() {
 gulp.task('plugins', function() {
   return gulp.src([
     paths.theme + 'js/vendor/jquery.min.js',
+    paths.theme + 'js/vendor/slick.js',
   ])
   .pipe(plugins.concat('plugins.js'))
   .on("error", plugins.notify.onError(function (error) {

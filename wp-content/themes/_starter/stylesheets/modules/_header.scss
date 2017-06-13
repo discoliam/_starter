@@ -40,7 +40,7 @@ header.site-header{
     display: block;
     position: absolute;
     right: 0;
-    top: auto;
+    top: 90px;
     left: auto;
     height: auto;
     width: auto;
@@ -60,6 +60,7 @@ header.site-header{
   height: 15px;
   position: absolute;
   right: 0;
+  top: 70px;
   cursor: pointer;
   z-index: 110;
   b{
@@ -83,9 +84,18 @@ header.site-header{
 
 .search-form{
   position: absolute;
-  top: 0;
+  top: $base-spacing;
   right: 0;
-  width: 200px;
+  width: 350px;
+
+  label{
+    width: 200px;
+    float: left;
+    input[type="search"]{}
+  }
+  input[type="submit"]{
+    float: right;
+  }
 }
 
 // Open Menu

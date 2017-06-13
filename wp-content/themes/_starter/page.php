@@ -17,5 +17,7 @@
 	<?php endwhile; // End of the loop.?>
 </main>
 
+<?php get_template_part( 'template-parts/content', 'components' ); ?>
+
 <?php
 get_footer();

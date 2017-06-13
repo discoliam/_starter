@@ -1,0 +1,44 @@
+// ------------------------------------------------------------
+// Hero
+// ------------------------------------------------------------
+
+.component.component--hero{
+  
+}
+
+
+.slides{
+  .slide{
+    position: relative;
+    .image{
+      display: block;
+      img{
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    .content{
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 50;
+      padding: gutter();
+      
+      p{
+        @include font-size(24px);
+        @include font-medium();
+      }
+
+      @include mq($from: medium){
+        top: 50%;
+        left: span(2 of 12);
+        width: span(5 of 12);
+        bottom: auto;
+        transform: translate3D(0, -50%, 0);
+      }
+
+    }
+
+  }
+}
