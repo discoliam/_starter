@@ -1,25 +1,36 @@
 // ------------------------------------------------------------
 // Alignments
 // ------------------------------------------------------------
+  
+$offset: span(2 of 12);
 
 .alignleft {
   display: inline;
   float: left;
-  margin-right: 1.5em;
+  margin-right: $base-spacing;
+  margin-left: -$offset;
 }
 
 .alignright {
   display: inline;
   float: right;
-  margin-left: 1.5em;
+  margin-left: $base-spacing;
+  margin-right: -$offset;
 }
 
-.aligncenter {
+img.alignnone,
+img.aligncenter {
   clear: both;
   display: block;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto $base-spacing auto;
 }
+
+
+// Sizes
+img.size-thumbnail{max-width: 150px;}
+img.size-medium{max-width: 350px;}
+img.size-full{max-width: 100%;}
+
 
 // ------------------------------------------------------------
 // Media

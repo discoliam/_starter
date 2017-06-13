@@ -7,7 +7,8 @@
   $buttonURL = get_sub_field("button_url");
 ?>
 
-<div class="component component--text-block">
+<div class="component component--call-to-action">
+
   <div class='text-wrapper'>
     <?php if($title) : ?>
       <h2><?php echo $title; ?></h2>
@@ -20,5 +21,6 @@
     <?php if($buttonText && $buttonURL)  : ?>
       <a href="<?php echo $buttonURL; ?>" title="<?php echo $buttonText; ?>" class="btn"><?php echo $buttonText; ?></a>
     <?php endif; ?>
-   </div>
+  </div>
+  
 </div>

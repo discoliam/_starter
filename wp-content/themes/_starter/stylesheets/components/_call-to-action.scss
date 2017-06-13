@@ -1,9 +1,9 @@
 // ------------------------------------------------------------
-// Components
+// Call to action 
 // ------------------------------------------------------------
 
-.component{
-  @include clearfix();
-  display: block;
-  margin-bottom: $base-spacing;  
+.component.component--call-to-action{
+  background-color: $border;
+  text-align: center;
+  padding: gutter();
 }

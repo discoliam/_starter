@@ -1,0 +1,29 @@
+// ------------------------------------------------------------
+// Text & Image
+// ------------------------------------------------------------
+
+.component.component--text-image{
+
+  .text{}
+
+  .image{}
+
+  @include mq($from: medium){
+    .text{width: span(5 of 12);}
+    .image{width: span(6 of 12);}
+
+    &.image-left{
+      .text{float: right;}
+      .image{float: left;}
+    }
+
+    &.image-right{
+      .text{float: left;}
+      .image{float: right;}
+    }
+
+
+  }
+
+
+}

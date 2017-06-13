@@ -1,0 +1,23 @@
+// ------------------------------------------------------------
+// Promotions
+// ------------------------------------------------------------
+
+.component.component--promotions{
+  margin-bottom: 0;
+  .promo-row{
+    .promo{margin-bottom: $base-spacing;}
+    @include mq($from: medium){
+      display: flex;
+      justify-content: space-between;
+      .promo{
+        margin: 0 gutter() $base-spacing 0;
+        flex-grow: 1;
+        &:last-child{margin-right: 0;}
+      }
+    }
+
+  
+  }
+
+
+}
