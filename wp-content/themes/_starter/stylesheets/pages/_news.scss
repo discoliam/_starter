@@ -2,9 +2,8 @@
 // News
 // ------------------------------------------------------------
 
-body.blog,
-body.single-post {
-  
+// Article Page
+body.blog {
   #main-content{
     width: 100%;
     @include clearfix();
@@ -23,15 +22,36 @@ body.single-post {
     display: block;
     clear: both;
   }
-
-
-
-
 }
 
-
-
-// Single
+// Single Page
 body.single {
+  
+  .post-meta{
+    margin-bottom: $base-spacing;
+    display: block;
+    @include clearfix();
+    position: relative;
+    img{
+      float: left;
+      width: 100px;
+      height: 100px;
+      border-radius: 100px;
+      border: solid 1px $border;
+      margin-right: $base-spacing;
+    }
+    p{
+      color: $border;
+      position: absolute;
+      top: 50%;
+      left: 110px;
+      transform: translateY(-50%);
+    }
+  }
+
+  .attachment-post-thumbnail{
+    margin-bottom: $base-spacing;
+  }
+
 
 }

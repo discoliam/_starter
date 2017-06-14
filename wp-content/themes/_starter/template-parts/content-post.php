@@ -10,8 +10,8 @@
 	<h2><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h2>
 	<div class="post-meta">
     <p>
-      <span class="author"><?php the_author(); ?> &bull;</span>
-      <time>Posted on <?php the_date('d.m.y'); ?></time> &bull;
+      <span class="author"><a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ), get_the_author_meta( 'user_nicename' ) ); ?>"><?php the_author(); ?></a> &bull;</span>
+      <time><?php the_date('d.m.y'); ?></time> &bull;
       <?php the_category( ', ' ); ?>
     </p>
   </div>
