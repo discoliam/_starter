@@ -37,9 +37,6 @@
 
     </div>
 
-  <?php else : ?>
-    <p>No promo row</p>
-
   <?php endif; ?>
 
 </div>

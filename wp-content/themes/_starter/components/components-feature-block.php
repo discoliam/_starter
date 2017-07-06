@@ -9,7 +9,7 @@
   $imagePositon = get_sub_field("image_position");
 ?>
 
-<div class="component component--text-image <?php echo "image-" . $imagePositon; ?>">
+<div class="component component--feature-block <?php echo "image-" . $imagePositon; ?>">
   
     <?php if( !empty($image) ): ?>
       <img src="<?php echo $image['url']; ?>" alt="<?php echo $title; ?>" class="image" />

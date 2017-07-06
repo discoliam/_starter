@@ -21,13 +21,25 @@
 
         get_template_part( 'components/components', 'call-to-action' );
 
-      elseif( get_row_layout() == 'component_text_image' ): 
+      elseif( get_row_layout() == 'component_feature_block' ): 
 
-        get_template_part( 'components/components', 'text-image' );
+        get_template_part( 'components/components', 'feature-block' );
 
       elseif( get_row_layout() == 'component_promotions' ): 
 
         get_template_part( 'components/components', 'promotions' );
+
+      elseif( get_row_layout() == 'component_concertina' ): 
+
+        get_template_part( 'components/components', 'concertina' );
+
+      elseif( get_row_layout() == 'component_quote' ): 
+
+        get_template_part( 'components/components', 'quote' );
+
+      elseif( get_row_layout() == 'component_downloads' ): 
+
+        get_template_part( 'components/components', 'downloads' );
 
       endif;
 

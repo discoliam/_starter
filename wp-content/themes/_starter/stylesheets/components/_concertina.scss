@@ -1,0 +1,23 @@
+// ------------------------------------------------------------
+// Concertina
+// ------------------------------------------------------------
+
+.component.component--concertina{
+
+  .concertina {
+    border-bottom: solid 1px $border;
+  }
+
+  .concertina-item{
+    border-top: solid 1px $border;
+    padding: 10px 0;
+    p{margin-bottom: 0;}
+  }
+
+  .concertina-item__desc{
+    display: none;
+    p{margin-bottom: 20px;}
+  }
+
+  
+}

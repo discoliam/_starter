@@ -1,0 +1,25 @@
+// ------------------------------------------------------------
+// Concertina
+// ------------------------------------------------------------
+
+.component.component--downloads{
+
+  .download-item{
+    border-bottom: solid 1px $border;
+    @include clearfix();
+    &:last-child{border-bottom: 0;}
+
+    .size{
+      color: $border;
+      @include font-size(12px);
+    }
+
+    @include mq($from: medium){
+      h3{float: left;}
+      .btn{float: right;}
+      p{clear: both;}
+    }
+
+  }
+  
+}
